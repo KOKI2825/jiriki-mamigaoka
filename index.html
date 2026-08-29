@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>自力整体＠真美ヶ丘クラス</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<meta name="description" content="自力整体＠真美ヶ丘クラス。自分の手と体の重みで骨格をゆるめ、ととのえる90分の教室です。60代・70代の方が中心。見学・体験のご相談はお電話またはLINEで。">
+<style>
+:root{
+  --ink:#141B2A; --ink-soft:#3C4660; --ink-faint:#5F6981;
+  --ground:#F3F6F9; --surface:#FFFFFF; --surface-2:#E7ECF2;
+  --line:rgba(20,27,42,.18); --line-strong:rgba(20,27,42,.4);
+  --night:#16203A; --night-2:#233158; --night-line:rgba(240,244,249,.3);
+  --moon:#F2F5F9; --moon-soft:#C7D0E0;
+  --accent:#A2434F; --accent-bg:#FAEDEE; --accent-glow:#E9A2A9;
+  --celadon:#3F6F67;
+  --shadow:0 2px 4px rgba(20,27,42,.06), 0 14px 34px -22px rgba(20,27,42,.5);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ink:#EDF0F6; --ink-soft:#BCC5D6; --ink-faint:#98A2B6;
+    --ground:#0E141F; --surface:#18202E; --surface-2:#222C3D;
+    --line:rgba(237,240,246,.2); --line-strong:rgba(237,240,246,.45);
+    --night:#0A1020; --night-2:#1A2540;
+    --moon:#F2F5F9; --moon-soft:#C7D0E0;
+    --accent:#EDA3AB; --accent-bg:rgba(237,163,171,.14); --accent-glow:#EDA3AB;
+    --celadon:#87B5AC;
+    --shadow:0 2px 4px rgba(0,0,0,.5), 0 16px 40px -24px rgba(0,0,0,.9);
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#EDF0F6; --ink-soft:#BCC5D6; --ink-faint:#98A2B6;
+  --ground:#0E141F; --surface:#18202E; --surface-2:#222C3D;
+  --line:rgba(237,240,246,.2); --line-strong:rgba(237,240,246,.45);
+  --night:#0A1020; --night-2:#1A2540;
+  --moon:#F2F5F9; --moon-soft:#C7D0E0;
+  --accent:#EDA3AB; --accent-bg:rgba(237,163,171,.14); --accent-glow:#EDA3AB;
+  --celadon:#87B5AC;
+  --shadow:0 2px 4px rgba(0,0,0,.5), 0 16px 40px -24px rgba(0,0,0,.9);
+}
+
+html{font-size:20px}
+html.fs-lg{font-size:24px}
+@media (max-width:700px){ html{font-size:18px} html.fs-lg{font-size:21px} }
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif;
+  font-weight:500; font-size:1rem; line-height:2.05; letter-spacing:.04em;
+  -webkit-font-smoothing:antialiased; padding-bottom:0;
+}
+h1,h2,h3,.mincho{font-family:"Zen Old Mincho","Hiragino Mincho ProN",serif; font-weight:600; letter-spacing:.05em; line-height:1.65; text-wrap:balance; margin:0}
+p{margin:0}
+
+.wrap{width:min(100% - 2rem, 1000px); margin-inline:auto}
+.narrow{width:min(100% - 2rem, 720px); margin-inline:auto}
+section{padding:clamp(3.5rem,7vw,5.5rem) 0}
+
+.label{display:inline-block; font-size:.8rem; font-weight:700; letter-spacing:.18em; color:var(--accent); background:var(--accent-bg); padding:.35rem 1.1rem; border-radius:2px}
+h2{font-size:clamp(1.6rem,4.2vw,2.35rem); margin-top:1.3rem}
+.lead{color:var(--ink-soft); font-size:1.02rem; max-width:36em}
+
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent); outline-offset:3px}
+
+/* ---- top bar ---- */
+.topbar{background:var(--surface); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20}
+.topbar-in{display:flex; align-items:center; justify-content:space-between; gap:.8rem; padding:.5rem 0; flex-wrap:wrap}
+.brand{font-family:"Zen Old Mincho",serif; font-size:.98rem; font-weight:600; letter-spacing:.04em; line-height:1.4}
+.brand small{display:none; font-family:"Zen Kaku Gothic New",sans-serif; font-size:.7rem; letter-spacing:.14em; color:var(--ink-faint); font-weight:500; margin-top:.15rem}
+.topbar-right{display:flex; align-items:center; justify-content:flex-end; gap:.9rem; flex-wrap:wrap; flex:1 1 auto}
+.fs-switch{display:flex; align-items:center; gap:.35rem; font-size:.72rem; color:var(--ink-faint)}
+.fs-switch button{font-family:inherit; font-weight:700; cursor:pointer; border:1px solid var(--line-strong); background:transparent; color:var(--ink); border-radius:3px; padding:.3rem .7rem; letter-spacing:.06em}
+.fs-switch button[aria-pressed="true"]{background:var(--ink); color:var(--ground); border-color:var(--ink)}
+.fs-switch .s{font-size:.8rem} .fs-switch .l{font-size:1rem}
+.topbar .linebtn.sm{color:#0A2E19}
+
+/* ---- hero ---- */
+.hero{background:linear-gradient(180deg, var(--surface) 0%, var(--ground) 100%); padding:clamp(2.5rem,6vw,4.5rem) 0 clamp(3rem,6vw,4.5rem)}
+.flyer-note{display:inline-block; border:1px solid var(--line-strong); border-radius:2px; padding:.4rem 1rem; font-size:.8rem; color:var(--ink-soft); letter-spacing:.08em}
+h1{font-size:clamp(1.9rem,5.4vw,3.1rem); font-weight:700; line-height:1.55; margin-top:1.4rem}
+h1 em{font-style:normal; color:var(--accent); border-bottom:.18em solid var(--accent-glow); padding-bottom:.05em}
+.hero p.big{font-size:1.1rem; color:var(--ink-soft); margin-top:1.6rem; max-width:30em}
+.hero-facts{list-style:none; padding:0; margin:2rem 0 0; display:flex; flex-wrap:wrap; gap:.6rem}
+.hero-facts li{font-size:.9rem; font-weight:700; background:var(--surface); border:1px solid var(--line); padding:.55rem 1.1rem; border-radius:2px}
+
+/* ---- LINE block ---- */
+.telbox{background:var(--night); color:var(--moon); border-radius:6px; padding:clamp(1.6rem,4vw,2.4rem); text-align:center; box-shadow:var(--shadow); display:grid; gap:.9rem; margin-top:2.6rem; justify-items:center}
+.telbox .cap{font-size:.98rem; color:var(--moon-soft); letter-spacing:.08em; line-height:1.9}
+.telbox .hours{font-size:.85rem; color:var(--moon-soft); line-height:1.9}
+.telbox a.num{display:block; font-family:"Zen Old Mincho",serif; font-weight:700; font-size:clamp(1.9rem,6.4vw,3rem); letter-spacing:.04em; color:#fff; text-decoration:none; font-variant-numeric:tabular-nums; line-height:1.3}
+.telbox a.num:hover{color:var(--accent-glow)}
+.telbox .split{display:flex; align-items:center; gap:1rem; width:100%; max-width:26rem; color:var(--moon-soft); font-size:.82rem; letter-spacing:.2em; margin:.3rem 0}
+.telbox .split::before,.telbox .split::after{content:""; height:1px; flex:1; background:var(--night-line)}
+.tel-mini{display:flex; align-items:center; gap:.5rem; text-decoration:none; color:var(--ink); font-family:"Zen Old Mincho",serif; font-size:1.2rem; font-weight:700; font-variant-numeric:tabular-nums}
+.tel-mini svg{width:1.1em; height:1.1em; color:var(--accent)}
+.tel-mini small{display:block; font-family:"Zen Kaku Gothic New",sans-serif; font-size:.55em; font-weight:700; letter-spacing:.1em; color:var(--ink-faint)}
+.linebtn{display:inline-flex; align-items:center; justify-content:center; gap:.8rem; width:100%; max-width:26rem; background:#06C755; color:#0A2E19; text-decoration:none;
+  font-family:"Zen Old Mincho",serif; font-weight:700; font-size:clamp(1.15rem,3.6vw,1.45rem); letter-spacing:.08em; line-height:1.4;
+  padding:1.05rem 1.4rem; border-radius:6px; box-shadow:0 10px 24px -12px rgba(6,199,85,.8); transition:transform .2s ease, filter .2s ease}
+.linebtn:hover{transform:translateY(-2px); filter:brightness(1.06)}
+.linebtn svg{flex:none; width:1.7em; height:1.7em}
+.linebtn small{display:block; font-family:"Zen Kaku Gothic New",sans-serif; font-size:.62em; font-weight:700; letter-spacing:.06em; opacity:.85; margin-top:.15rem}
+.linebtn.sm{font-size:.95rem; padding:.6rem 1.1rem; width:auto; border-radius:4px; box-shadow:none}
+.linebtn.sm svg{width:1.4em; height:1.4em}
+.qr-block{display:grid; justify-items:center; gap:.6rem; margin-top:.4rem}
+.qr-plate{background:#fff; padding:.6rem; border-radius:4px; width:9.5rem}
+.qr{display:block; width:100%; height:auto; shape-rendering:crispEdges}
+.qr-block p{font-size:.78rem; color:var(--moon-soft); line-height:1.8}
+@media (max-width:700px){ .qr-block{display:none} }
+
+/* ---- worry cards ---- */
+.worries{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem; margin-top:2.6rem}
+.worry{background:var(--surface); border:1px solid var(--line); border-left:6px solid var(--accent); padding:1.4rem 1.6rem; display:flex; gap:1rem; align-items:flex-start}
+.worry b{font-size:1.05rem; display:block; margin-bottom:.4rem; font-family:"Zen Old Mincho",serif}
+.worry p{font-size:.9rem; color:var(--ink-soft); line-height:1.9}
+.check{flex:none; width:1.6rem; height:1.6rem; border-radius:50%; background:var(--accent); color:#fff; display:grid; place-items:center; font-size:.85rem; font-weight:700; margin-top:.3rem}
+
+/* ---- difference ---- */
+.diffs{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; margin-top:2.6rem}
+.diff{background:var(--surface); border:1px solid var(--line); padding:1.6rem; display:grid; gap:.7rem; align-content:start}
+.diff.mine{border:2px solid var(--accent); background:var(--accent-bg)}
+.diff h3{font-size:1.1rem}
+.diff .who{font-size:.78rem; font-weight:700; letter-spacing:.14em; color:var(--ink-faint)}
+.diff.mine .who{color:var(--accent)}
+.diff p{font-size:.9rem; color:var(--ink-soft); line-height:1.9}
+
+/* ---- benefits ---- */
+.benefits{display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:1rem; margin-top:2.6rem}
+.benefit{background:var(--surface); border:1px solid var(--line); padding:1.7rem; display:grid; gap:.8rem; align-content:start; box-shadow:var(--shadow)}
+.benefit .kanji{font-family:"Zen Old Mincho",serif; font-size:2.4rem; line-height:1; color:var(--accent)}
+.benefit h3{font-size:1.2rem}
+.benefit p{font-size:.92rem; color:var(--ink-soft); line-height:1.95}
+
+/* ---- night strip ---- */
+.night{background:linear-gradient(178deg,var(--night) 0%, var(--night-2) 100%); color:var(--moon)}
+.night h2{color:#fff}
+.night .label{background:rgba(240,244,249,.14); color:var(--accent-glow)}
+.night .lead{color:var(--moon-soft)}
+.breath-row{display:flex; align-items:center; gap:clamp(1.5rem,5vw,3.5rem); flex-wrap:wrap; margin-top:2.4rem}
+.breath{width:180px; height:180px; flex:none; display:grid; place-items:center; position:relative}
+.ring{position:absolute; border-radius:50%; border:1px solid var(--night-line)}
+.r1{inset:0} .r2{inset:16%}
+.pulse{position:absolute; inset:22%; border-radius:50%; background:radial-gradient(circle at 50% 45%, rgba(242,245,249,.3), rgba(233,162,169,.16) 55%, transparent 74%); animation:breathe 10s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scale(.85); opacity:.6} 40%{transform:scale(1.15); opacity:1}}
+.breath b{position:relative; font-family:"Zen Old Mincho",serif; font-size:1.15rem; color:#fff; letter-spacing:.1em; text-align:center; line-height:1.8}
+
+/* ---- mechanism ---- */
+.mech{display:grid; grid-template-columns:auto 1fr; gap:clamp(1.5rem,5vw,3.5rem); align-items:center; margin-top:2.8rem}
+.mech ol{list-style:none; margin:0; padding:0; display:grid; gap:1.5rem}
+.mech li{padding-left:1.4rem; border-left:4px solid var(--accent)}
+.mech li b{display:block; font-family:"Zen Old Mincho",serif; font-size:1.12rem; margin-bottom:.3rem}
+.mech li span{font-size:.92rem; color:var(--ink-soft); line-height:1.95}
+
+/* ---- flow (two halves) ---- */
+.halves{display:grid; grid-template-columns:1fr auto 1fr; gap:1.2rem; align-items:stretch; margin-top:2.8rem}
+.half{background:var(--ground); border:1px solid var(--line); padding:clamp(1.6rem,3.5vw,2.2rem); display:grid; gap:.9rem; align-content:start}
+.half.latter{background:var(--accent-bg); border-color:var(--accent)}
+.half .ph{font-size:.82rem; font-weight:700; letter-spacing:.16em; color:#fff; background:var(--ink); padding:.35rem 1rem; border-radius:2px; justify-self:start}
+.half.latter .ph{background:var(--accent)}
+.half h3{font-size:clamp(1.25rem,3vw,1.55rem); line-height:1.6}
+.half p{font-size:.95rem; color:var(--ink-soft); line-height:2}
+.half .keyword{font-family:"Zen Old Mincho",serif; font-size:1rem; font-weight:600; color:var(--accent); border-top:1px solid var(--line); padding-top:.9rem}
+.arrow{display:grid; place-items:center; color:var(--accent); font-size:1.9rem; line-height:1}
+
+/* ---- faq ---- */
+details{border-bottom:1px solid var(--line); background:var(--surface)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer; padding:1.3rem 3rem 1.3rem 1.4rem; font-size:1.05rem; position:relative; list-style:none; font-family:"Zen Old Mincho",serif; font-weight:600; line-height:1.7}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"＋"; position:absolute; right:1.2rem; top:1.25rem; color:var(--accent); font-size:1.2rem; font-weight:700}
+details[open] summary::after{content:"−"}
+details p{padding:0 1.4rem 1.5rem; font-size:.94rem; color:var(--ink-soft); line-height:1.95}
+
+/* ---- final cta ---- */
+.final{background:linear-gradient(172deg,var(--night) 0%, var(--night-2) 60%, #6B5567 100%); color:var(--moon); text-align:center}
+.final h2{color:#fff}
+.final .lead{color:var(--moon-soft); margin-inline:auto; text-align:center}
+.final .telbox{background:rgba(255,255,255,.07); border:1px solid var(--night-line); max-width:620px; margin-inline:auto}
+
+/* ---- contact: phone + form ---- */
+.contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin-top:2.6rem; text-align:left; align-items:start}
+.contact-grid .telbox{margin-top:0; max-width:none; align-content:start}
+.or{display:none}
+
+/* ---- sticky mobile tel ---- */
+.sticky-tel{display:none}
+@media (max-width:700px){
+  body{padding-bottom:5.2rem}
+  .sticky-tel{display:grid; grid-template-columns:1fr 1fr; position:fixed; left:0; right:0; bottom:0; z-index:30; box-shadow:0 -6px 20px -10px rgba(0,0,0,.6)}
+  .sticky-tel a{display:flex; align-items:center; justify-content:center; gap:.5rem; padding:.85rem .4rem; text-decoration:none; font-family:"Zen Old Mincho",serif; font-weight:700; font-size:1.1rem; letter-spacing:.04em}
+  .sticky-tel a.t{background:var(--accent); color:#fff}
+  .sticky-tel a.l{background:#06C755; color:#0A2E19}
+  .sticky-tel svg{width:1.5em; height:1.5em; flex:none}
+  .sticky-tel small{font-family:"Zen Kaku Gothic New",sans-serif; font-size:.62rem; letter-spacing:.06em; opacity:.85; font-weight:700; display:block}
+  .topbar .linebtn.sm,.tel-mini{display:none}
+  .mech{grid-template-columns:1fr}
+  .halves{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .or{display:block; text-align:center; font-family:"Zen Old Mincho",serif; font-weight:700; font-size:1rem; letter-spacing:.2em; color:var(--moon-soft)}
+  .arrow{transform:rotate(90deg); padding:.3rem 0}
+  .topbar{position:static}
+}
+
+footer{background:var(--night); color:var(--moon-soft); padding:3rem 0; font-size:.85rem; line-height:2.1}
+footer strong{font-family:"Zen Old Mincho",serif; color:#fff; font-size:1.15rem; font-weight:600; letter-spacing:.12em; display:block; margin-bottom:.9rem}
+.note{font-size:.82rem; color:var(--ink-faint); margin-top:1.4rem; line-height:1.9}
+
+@media (prefers-reduced-motion:reduce){ *{animation:none !important; transition:none !important} }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <div class="brand">自力整体＠真美ヶ丘クラス</div>
+    <div class="topbar-right">
+      <div class="fs-switch">
+        <span>文字</span>
+        <button type="button" class="s" id="fsS" aria-pressed="true">標準</button>
+        <button type="button" class="l" id="fsL" aria-pressed="false">大きく</button>
+      </div>
+      <a class="tel-mini" href="tel:0000000000"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.7 3.4 4.2 5.9 7.6 7.6l2.5-2.5c.3-.3.8-.4 1.2-.3 1.2.4 2.5.6 3.9.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C11.3 22 2 12.7 2 1c0-.6.4-1 1-1h3.9c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.9.1.4 0 .8-.3 1.2l-2.6 2.5z" transform="translate(0 1)"/></svg> <span>000-0000-0000<small>9時〜16時</small></span></a>
+      <a class="linebtn sm" href="https://lin.ee/zrGml9s" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6c-5.4 0-9.8 3.5-9.8 7.9 0 3.9 3.5 7.2 8.2 7.8.3.07.75.22.86.5.1.26.07.66.03.92l-.14.83c-.04.25-.2.97.85.53s5.65-3.33 7.7-5.7c1.42-1.56 2.1-3.14 2.1-4.88 0-4.36-4.4-7.9-9.8-7.9z"/></svg> LINEで相談</a>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="flyer-note">チラシをご覧いただき、ありがとうございます</p>
+    <h1>力を入れずに、<br><em>自分で</em>整える。</h1>
+    <p class="big">自力整体は、人に体をあずける施術ではありません。自分の手と、自分の体の重みだけで、かたくなった関節と骨格をゆるめていく健康法です。<br>やり方を覚えれば、ご自宅でも続けられます。</p>
+    <ul class="hero-facts">
+      <li>60代・70代の方が中心</li>
+      <li>体がかたい方こそ</li>
+      <li>寝たまま・座ったままの動き</li>
+      <li>女性が中心／男性も歓迎</li>
+    </ul>
+
+    <div class="telbox">
+      <p class="cap">ご相談・お申し込みは、<br>お電話またはLINEでどうぞ</p>
+      <a class="num" href="tel:0000000000">000-0000-0000</a>
+      <p class="hours">受付時間　午前9時 〜 午後4時<br>出られないこともございます。その際は、<br>こちらから折り返しご連絡いたします。</p>
+      <p class="split">または</p>
+      <a class="linebtn" href="https://lin.ee/zrGml9s" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6c-5.4 0-9.8 3.5-9.8 7.9 0 3.9 3.5 7.2 8.2 7.8.3.07.75.22.86.5.1.26.07.66.03.92l-.14.83c-.04.25-.2.97.85.53s5.65-3.33 7.7-5.7c1.42-1.56 2.1-3.14 2.1-4.88 0-4.36-4.4-7.9-9.8-7.9z"/></svg> 友だち追加はこちら<small>ボタンを押すとLINEが開きます</small></a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section>
+  <div class="wrap">
+    <span class="label">こんなお悩み</span>
+    <h2>こんなこと、ありませんか。</h2>
+    <div class="worries">
+      <div class="worry"><span class="check">✓</span><div><b>夜、ぐっすり眠れない</b><p>布団に入っても寝つけない。夜中に何度も目が覚める。朝、体が重い。</p></div></div>
+      <div class="worry"><span class="check">✓</span><div><b>肩と首が、いつも張っている</b><p>もんでもらった直後は楽になるのに、数日でまた元に戻ってしまう。</p></div></div>
+      <div class="worry"><span class="check">✓</span><div><b>目が疲れて、頭まで重い</b><p>テレビや新聞を見ていると目の奥が痛くなる。目の疲れから肩こりや頭の重さにつながる。</p></div></div>
+      <div class="worry"><span class="check">✓</span><div><b>背中が丸くなってきた</b><p>ガラスに映る自分の姿勢に驚く。歩いていると、すぐ疲れる。</p></div></div>
+    </div>
+    <p class="lead" style="margin-top:2rem">どれも、年のせいだけではありません。骨盤と背骨のかたむきを、まわりの筋肉がずっと支え続けている——体が「力の抜き方」を忘れているサインです。</p>
+  </div>
+</section>
+
+<section style="background:var(--surface); border-block:1px solid var(--line)">
+  <div class="wrap">
+    <span class="label">自力整体とは</span>
+    <h2>ゆるめる「順番」を覚える、<br>90分の教室です。</h2>
+    <p class="lead" style="margin-top:1.4rem">体がやわらかい人向けのものではありません。かたい方ほど、順番どおりに動かすと違いがはっきり出ます。畳一枚の広さと、自分の手だけあれば十分です。</p>
+    <div class="diffs">
+      <div class="diff">
+        <p class="who">マッサージ・整体院</p>
+        <h3>人にやってもらう</h3>
+        <p>その場は楽になります。ただ、体を支える骨格がそのままなので、しばらくすると戻ってしまいます。</p>
+      </div>
+      <div class="diff">
+        <p class="who">ふつうの体操・ストレッチ</p>
+        <h3>力を入れて伸ばす</h3>
+        <p>がんばって伸ばすと、体は反射的に縮もうとします。息も止まりがちで、かたい方には続きにくい方法です。</p>
+      </div>
+      <div class="diff mine">
+        <p class="who">自力整体</p>
+        <h3>自分の重みで、ゆるめる</h3>
+        <p>息を吐きながら、体の重みをあずけて待ちます。力は使いません。骨の位置が戻るので、変化が残ります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="label">体に起きる変化</span>
+    <h2>五つの、うれしい変化。</h2>
+    <div class="benefits">
+      <div class="benefit"><span class="kanji" aria-hidden="true">眠</span><h3>夜、よく眠れる</h3><p>息を長く吐きながら関節をゆるめていくと、体が休むほうへ切り替わりやすくなります。「その日の夜からよく眠れた」というお声を、いちばん多くいただきます。</p></div>
+      <div class="benefit"><span class="kanji" aria-hidden="true">解</span><h3>肩と首の張りが、ゆるむ</h3><p>力を入れて伸ばすのではなく、体の重みをあずけて待つ動きです。だからこそ、今まで抜けなかった肩・首の力がすっと抜けていきます。</p></div>
+      <div class="benefit"><span class="kanji" aria-hidden="true">眼</span><h3>目の疲れが、軽くなる</h3><p>目の疲れは、首のつけ根のかたさと深くつながっています。首から後頭部をゆるめると、目の奥の重さが楽になったと感じる方が多くいらっしゃいます。</p></div>
+      <div class="benefit"><span class="kanji" aria-hidden="true">整</span><h3>自律神経が、ととのう</h3><p>自律神経とは、内臓や血のめぐりを自動で調節している神経のこと。「がんばる神経」と「休む神経」の切りかえが、深い呼吸によってスムーズになっていきます。</p></div>
+      <div class="benefit"><span class="kanji" aria-hidden="true">骨</span><h3>骨から、姿勢が変わる</h3><p>筋肉の力で「よい姿勢」をつくるのではありません。骨盤を水平に戻し、背骨を積み直します。土台が変わるので、気をぬいても崩れにくくなります。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="night">
+  <div class="wrap">
+    <span class="label">呼吸から、はじめます</span>
+    <h2>レッスンは、この呼吸から。</h2>
+    <div class="breath-row">
+      <div class="breath" aria-hidden="true">
+        <div class="ring r1"></div><div class="ring r2"></div><div class="pulse"></div>
+        <b>吸う 4<br>吐く 6</b>
+      </div>
+      <p class="lead" style="flex:1; min-width:260px">四つ数えて吸い、六つ数えて吐く。吐く息を長くするだけで、体は休むほうへ傾きます。むずかしい動きは何もありません。この呼吸に合わせて体をゆるめていくのが、自力整体です。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="label">なぜ骨からなのか</span>
+    <h2>骨盤から、順番に。</h2>
+    <div class="mech">
+      <svg width="140" height="310" viewBox="0 0 140 310" role="img" aria-label="骨盤から背骨、肩甲骨、呼吸へとつながる図">
+        <path d="M70 282 C 38 236, 102 190, 70 142 C 42 100, 90 58, 70 22" fill="none" stroke="var(--line-strong)" stroke-width="2"/>
+        <circle cx="70" cy="282" r="10" fill="var(--accent)"/>
+        <circle cx="83" cy="203" r="8" fill="var(--accent)" opacity=".75"/>
+        <circle cx="61" cy="114" r="8" fill="var(--accent)" opacity=".55"/>
+        <circle cx="70" cy="22" r="10" fill="none" stroke="var(--celadon)" stroke-width="2"/>
+        <circle cx="70" cy="22" r="17" fill="none" stroke="var(--celadon)" stroke-width="1.5" opacity=".5"/>
+      </svg>
+      <ol>
+        <li><b>① 骨盤 ── すべての土台</b><span>座り方のくせで骨盤がかたむくと、その上に乗る背骨も必ずゆがみます。まず、ここを水平に戻します。</span></li>
+        <li><b>② 背骨 ── 一つずつ動かす</b><span>かたまったところがあると、となりの骨が代わりに働きすぎて痛みが出ます。全体をまんべんなく動かします。</span></li>
+        <li><b>③ 肩甲骨 ── 背中からはがす</b><span>肩甲骨が背中に貼りついたままだと、呼吸は浅いまま。ここがゆるむと胸が広がります。</span></li>
+        <li><b>④ 呼吸 ── 自律神経への入口</b><span>呼吸は、自分の意思で自律神経にはたらきかけられる数少ない方法です。骨格がととのうほど、息は深くなります。</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--surface); border-block:1px solid var(--line)">
+  <div class="wrap">
+    <span class="label">レッスンの流れ</span>
+    <h2>90分を、大きく二つに分けて。</h2>
+    <p class="lead" style="margin-top:1.4rem">動きはすべて、床に寝たまま・いすや床に座ったままできるものです。息が上がることも、汗をかくこともありません。</p>
+    <div class="halves">
+      <div class="half">
+        <span class="ph">前半</span>
+        <h3>痛みとゆがみを、<br>とりのぞく</h3>
+        <p>その日に張っているところ、痛むところから手をつけます。体の重みをあずけて、かたまった関節をゆるめていく時間です。よけいな力が抜けると、体は自然と楽なほうへ戻りはじめます。</p>
+        <p class="keyword">ゆるめて、とる</p>
+      </div>
+      <div class="arrow" aria-hidden="true">▶</div>
+      <div class="half latter">
+        <span class="ph">後半</span>
+        <h3>骨から、<br>ととのえる</h3>
+        <p>力の抜けた体で、骨盤と背骨を本来の位置に戻していきます。ここでととのえた土台が、そのあとの姿勢と、その日の夜の眠りにつながっていきます。</p>
+        <p class="keyword">整えて、なじませる</p>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:2rem">その日の体調や、参加される方の状態に合わせて、動きの内容は毎回変わります。同じ回はふたつとありません。<br>終わったあと、立ち上がってみてください。足の裏の、床の感じ方が変わっています。</p>
+  </div>
+</section>
+
+<section>
+  <div class="narrow">
+    <span class="label">よくあるご質問</span>
+    <h2 style="margin-bottom:2.4rem">みなさまからのご質問。</h2>
+    <details><summary>体がかたいのですが、大丈夫でしょうか。</summary><p>かたい方のための教室です。伸ばす動きではなく、ゆるめる動きですので、体のやわらかさは関係ありません。むしろ、かたい方のほうが変化を感じやすいです。</p></details>
+    <details><summary>運動がまったく苦手です。</summary><p>ほとんどの動きを、寝たまま・座ったまま行います。走ったり、跳んだりすることはありません。息が上がることもありません。</p></details>
+    <details><summary>ひざや腰が痛みます。参加できますか。</summary><p>痛む場所は動かさずに進められます。お申し込みのときに、LINEでお知らせください。無理のない範囲でご案内します。</p></details>
+    <details><summary>何歳くらいの方が通っていますか。</summary><p>60代・70代の方が中心で、80代の方もいらっしゃいます。女性の方が多いですが、男性の方もご参加いただけます。</p></details>
+    <details><summary>どれくらいで変化を感じますか。</summary><p>感じ方には個人差があります。その日の夜に眠りの違いを感じる方もいれば、姿勢が落ち着くまで数か月かかる方もいらっしゃいます。週に1回の継続をおすすめしています。</p></details>
+    <details><summary>持病があります／通院しています。</summary><p>お申し込みのときにお知らせください。治療を目的とするものではありませんので、お医者さまから運動を止められている場合は、必ず主治医にご相談のうえお越しください。</p></details>
+    <details><summary>何を持っていけばよいですか。</summary><p>動きやすい服装（ジャージ・ゆったりしたズボン）と、お飲みもの、汗ふきタオルをお持ちください。マットはお貸しします。着替える場所もございます。当日は裸足になっていただきます。</p></details>
+    <details><summary>LINEを使っていないのですが。</summary><p>お電話でも承っております。午前9時から午後4時のあいだにおかけください。出られないこともございますが、その際はこちらから折り返しご連絡いたします。</p></details>
+    <details><summary>見学だけでもよいですか。</summary><p>もちろんです。まずは様子をご覧になってからお決めください。LINEでご連絡いただければ、日時をご案内いたします。</p></details>
+  </div>
+</section>
+
+<section class="final" id="contact">
+  <div class="wrap">
+    <span class="label">お問い合わせ</span>
+    <h2>お電話、または<br>LINEでどうぞ。</h2>
+    <p class="lead">ご質問だけでもかまいません。「チラシを見ました」とお伝えいただければ、担当がご案内いたします。</p>
+
+    <div class="contact-grid">
+      <div class="telbox">
+        <p class="cap">お電話でのお問い合わせ</p>
+        <a class="num" href="tel:0000000000">000-0000-0000</a>
+        <p class="hours">受付時間　午前9時 〜 午後4時<br>出られないこともございます。その際は、<br>こちらから折り返しご連絡いたします。</p>
+      </div>
+
+      <p class="or" aria-hidden="true">または</p>
+
+      <div class="telbox">
+        <p class="cap">LINEでのお問い合わせ</p>
+        <a class="linebtn" href="https://lin.ee/zrGml9s" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6c-5.4 0-9.8 3.5-9.8 7.9 0 3.9 3.5 7.2 8.2 7.8.3.07.75.22.86.5.1.26.07.66.03.92l-.14.83c-.04.25-.2.97.85.53s5.65-3.33 7.7-5.7c1.42-1.56 2.1-3.14 2.1-4.88 0-4.36-4.4-7.9-9.8-7.9z"/></svg> 友だち追加はこちら<small>ボタンを押すとLINEが開きます</small></a>
+        <p class="hours">24時間受け付けています。<br>お返事は、翌営業日までにいたします。</p>
+        <div class="qr-block">
+          <div class="qr-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" class="qr" role="img" aria-label="LINE公式アカウントのQRコード"><path fill="#fff" d="M0 0h29v29h-29z"/><path stroke="#141b2a" d="M2 2.5h7m1 0h1m1 0h2m1 0h3m2 0h7m-25 1h1m5 0h1m1 0h5m5 0h1m5 0h1m-25 1h1m1 0h3m1 0h1m1 0h3m1 0h3m1 0h1m1 0h1m1 0h3m1 0h1m-25 1h1m1 0h3m1 0h1m2 0h1m3 0h1m4 0h1m1 0h3m1 0h1m-25 1h1m1 0h3m1 0h1m1 0h2m2 0h3m1 0h1m1 0h1m1 0h3m1 0h1m-25 1h1m5 0h1m2 0h1m1 0h2m1 0h1m1 0h1m1 0h1m5 0h1m-25 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-16 1h5m1 0h1m-16 1h1m2 0h6m1 0h1m3 0h1m2 0h1m2 0h1m1 0h3m-24 1h1m2 0h2m1 0h1m1 0h2m1 0h4m3 0h5m-24 1h1m2 0h2m1 0h1m1 0h3m4 0h3m2 0h2m2 0h1m-20 1h1m1 0h1m4 0h1m2 0h1m2 0h7m-25 1h8m1 0h1m2 0h1m1 0h1m1 0h1m1 0h2m4 0h1m-25 1h1m4 0h1m1 0h4m4 0h1m4 0h1m2 0h1m-24 1h4m1 0h2m1 0h1m1 0h4m1 0h1m1 0h1m2 0h5m-25 1h1m1 0h2m3 0h2m2 0h1m7 0h1m1 0h2m1 0h1m-25 1h1m2 0h2m1 0h2m1 0h1m3 0h1m1 0h6m1 0h2m-16 1h2m1 0h2m1 0h1m1 0h1m3 0h1m1 0h2m-24 1h7m1 0h1m2 0h1m2 0h1m1 0h1m1 0h1m1 0h1m3 0h1m-25 1h1m5 0h1m1 0h1m1 0h1m1 0h2m1 0h2m3 0h1m-21 1h1m1 0h3m1 0h1m1 0h1m3 0h2m1 0h6m2 0h2m-25 1h1m1 0h3m1 0h1m1 0h2m4 0h3m1 0h1m4 0h2m-25 1h1m1 0h3m1 0h1m2 0h1m2 0h1m1 0h1m2 0h1m2 0h5m-25 1h1m5 0h1m2 0h2m8 0h2m1 0h3m-25 1h7m1 0h1m1 0h1m1 0h3m1 0h2m3 0h1m2 0h1"/></svg></div>
+          <p>パソコンでご覧の方は、<br>スマートフォンでこちらを読み取ってください</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>自力整体＠真美ヶ丘クラス</strong>
+    <p>お電話 000-0000-0000（午前9時〜午後4時／出られない場合は折り返します）<br>
+    LINE公式アカウント（24時間受付／お返事は翌営業日までに）</p>
+    <p style="margin-top:1rem"><a class="linebtn sm" href="https://lin.ee/zrGml9s" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6c-5.4 0-9.8 3.5-9.8 7.9 0 3.9 3.5 7.2 8.2 7.8.3.07.75.22.86.5.1.26.07.66.03.92l-.14.83c-.04.25-.2.97.85.53s5.65-3.33 7.7-5.7c1.42-1.56 2.1-3.14 2.1-4.88 0-4.36-4.4-7.9-9.8-7.9z"/></svg> 友だち追加はこちら</a></p>
+    <p style="margin-top:1.2rem; opacity:.8">※ 自力整体は健康法であり、医療行為・治療ではありません。効果の感じ方には個人差があります。<br>
+    ※ このページはデザイン確認用のイメージです。教室名・電話番号は仮の内容です（LINEの宛先のみ実際のアカウントです）。</p>
+  </div>
+</footer>
+
+<div class="sticky-tel">
+  <a class="t" href="tel:0000000000"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.7 3.4 4.2 5.9 7.6 7.6l2.5-2.5c.3-.3.8-.4 1.2-.3 1.2.4 2.5.6 3.9.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C11.3 22 2 12.7 2 1c0-.6.4-1 1-1h3.9c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.9.1.4 0 .8-.3 1.2l-2.6 2.5z" transform="translate(0 1)"/></svg><span>電話する<small>9時〜16時</small></span></a>
+  <a class="l" href="https://lin.ee/zrGml9s" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6c-5.4 0-9.8 3.5-9.8 7.9 0 3.9 3.5 7.2 8.2 7.8.3.07.75.22.86.5.1.26.07.66.03.92l-.14.83c-.04.25-.2.97.85.53s5.65-3.33 7.7-5.7c1.42-1.56 2.1-3.14 2.1-4.88 0-4.36-4.4-7.9-9.8-7.9z"/></svg><span>LINEで相談<small>24時間受付</small></span></a>
+</div>
+
+<script>
+(function(){
+  var root = document.documentElement, S = document.getElementById("fsS"), L = document.getElementById("fsL");
+  function set(large, save){
+    root.classList.toggle("fs-lg", large);
+    S.setAttribute("aria-pressed", String(!large));
+    L.setAttribute("aria-pressed", String(large));
+    if (save) { try { localStorage.setItem("jiriki-fs", large ? "lg" : "md"); } catch(e){} }
+  }
+  try { if (localStorage.getItem("jiriki-fs") === "lg") set(true, false); } catch(e){}
+  S.addEventListener("click", function(){ set(false, true); });
+  L.addEventListener("click", function(){ set(true, true); });
+})();
+</script>
+</body>
+</html>
