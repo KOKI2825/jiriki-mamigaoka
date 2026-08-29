@@ -105,14 +105,15 @@ h1 em{font-style:normal; color:var(--accent); border-bottom:.18em solid var(--ac
   padding:1.05rem 1.4rem; border-radius:6px; box-shadow:0 10px 24px -12px rgba(6,199,85,.8); transition:transform .2s ease, filter .2s ease}
 .linebtn:hover{transform:translateY(-2px); filter:brightness(1.06)}
 .linebtn svg{flex:none; width:1.7em; height:1.7em}
-.linebtn small{display:block; font-family:"Zen Kaku Gothic New",sans-serif; font-size:.62em; font-weight:700; letter-spacing:.06em; opacity:.85; margin-top:.15rem}
+.linebtn .lb{display:block; text-align:center; line-height:1.4}
+.linebtn small{display:block; font-family:"Zen Kaku Gothic New",sans-serif; font-size:.62em; font-weight:700; letter-spacing:.04em; opacity:.85; margin-top:.2rem; white-space:nowrap}
 .linebtn.sm{font-size:.95rem; padding:.6rem 1.1rem; width:auto; border-radius:4px; box-shadow:none}
 .linebtn.sm svg{width:1.4em; height:1.4em}
 .qr-block{display:grid; justify-items:center; gap:.6rem; margin-top:.4rem}
 .qr-plate{background:#fff; padding:.6rem; border-radius:4px; width:9.5rem}
 .qr{display:block; width:100%; height:auto; shape-rendering:crispEdges}
 .qr-block p{font-size:.78rem; color:var(--moon-soft); line-height:1.8}
-@media (max-width:700px){ .qr-block{display:none} .telbox{padding:1.5rem 1.1rem} }
+@media (max-width:700px){ .qr-block{display:none} .telbox{padding:1.5rem 1.1rem} .linebtn{padding:1rem .9rem; gap:.6rem; letter-spacing:.05em} }
 
 /* ---- worry cards ---- */
 .worries{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem; margin-top:2.6rem}
@@ -226,7 +227,7 @@ footer strong{font-family:"Zen Old Mincho",serif; color:#fff; font-size:1.15rem;
         <button type="button" class="l" id="fsL" aria-pressed="false">大きく</button>
       </div>
       <a class="tel-mini" href="tel:0000000000"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.7 3.4 4.2 5.9 7.6 7.6l2.5-2.5c.3-.3.8-.4 1.2-.3 1.2.4 2.5.6 3.9.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C11.3 22 2 12.7 2 1c0-.6.4-1 1-1h3.9c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.9.1.4 0 .8-.3 1.2l-2.6 2.5z" transform="translate(0 1)"/></svg> <span>000-0000-0000<small>9時〜16時</small></span></a>
-      <a class="linebtn sm" href="https://lin.ee/zrGml9s" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6c-5.4 0-9.8 3.5-9.8 7.9 0 3.9 3.5 7.2 8.2 7.8.3.07.75.22.86.5.1.26.07.66.03.92l-.14.83c-.04.25-.2.97.85.53s5.65-3.33 7.7-5.7c1.42-1.56 2.1-3.14 2.1-4.88 0-4.36-4.4-7.9-9.8-7.9z"/></svg> LINEで相談</a>
+      <a class="linebtn sm" href="https://lin.ee/zrGml9s" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6c-5.4 0-9.8 3.5-9.8 7.9 0 3.9 3.5 7.2 8.2 7.8.3.07.75.22.86.5.1.26.07.66.03.92l-.14.83c-.04.25-.2.97.85.53s5.65-3.33 7.7-5.7c1.42-1.56 2.1-3.14 2.1-4.88 0-4.36-4.4-7.9-9.8-7.9z"/></svg><span class="lb">LINEで相談</span></a>
     </div>
   </div>
 </div>
@@ -247,7 +248,7 @@ footer strong{font-family:"Zen Old Mincho",serif; color:#fff; font-size:1.15rem;
       <a class="num" href="tel:0000000000">000-0000-0000</a>
       <p class="hours">受付時間　午前9時 〜 午後4時<br>出られないこともございます。<br>その際は、こちらから折り返します。</p>
       <p class="split">または</p>
-      <a class="linebtn" href="https://lin.ee/zrGml9s" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6c-5.4 0-9.8 3.5-9.8 7.9 0 3.9 3.5 7.2 8.2 7.8.3.07.75.22.86.5.1.26.07.66.03.92l-.14.83c-.04.25-.2.97.85.53s5.65-3.33 7.7-5.7c1.42-1.56 2.1-3.14 2.1-4.88 0-4.36-4.4-7.9-9.8-7.9z"/></svg> 友だち追加はこちら<small>ボタンを押すとLINEが開きます</small></a>
+      <a class="linebtn" href="https://lin.ee/zrGml9s" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6c-5.4 0-9.8 3.5-9.8 7.9 0 3.9 3.5 7.2 8.2 7.8.3.07.75.22.86.5.1.26.07.66.03.92l-.14.83c-.04.25-.2.97.85.53s5.65-3.33 7.7-5.7c1.42-1.56 2.1-3.14 2.1-4.88 0-4.36-4.4-7.9-9.8-7.9z"/></svg><span class="lb">友だち追加<small>ボタンを押すとLINEが開きます</small></span></a>
     </div>
   </div>
 </header>
@@ -401,7 +402,7 @@ footer strong{font-family:"Zen Old Mincho",serif; color:#fff; font-size:1.15rem;
 
       <div class="telbox">
         <p class="cap">LINEでのお問い合わせ</p>
-        <a class="linebtn" href="https://lin.ee/zrGml9s" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6c-5.4 0-9.8 3.5-9.8 7.9 0 3.9 3.5 7.2 8.2 7.8.3.07.75.22.86.5.1.26.07.66.03.92l-.14.83c-.04.25-.2.97.85.53s5.65-3.33 7.7-5.7c1.42-1.56 2.1-3.14 2.1-4.88 0-4.36-4.4-7.9-9.8-7.9z"/></svg> 友だち追加はこちら<small>ボタンを押すとLINEが開きます</small></a>
+        <a class="linebtn" href="https://lin.ee/zrGml9s" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6c-5.4 0-9.8 3.5-9.8 7.9 0 3.9 3.5 7.2 8.2 7.8.3.07.75.22.86.5.1.26.07.66.03.92l-.14.83c-.04.25-.2.97.85.53s5.65-3.33 7.7-5.7c1.42-1.56 2.1-3.14 2.1-4.88 0-4.36-4.4-7.9-9.8-7.9z"/></svg><span class="lb">友だち追加<small>ボタンを押すとLINEが開きます</small></span></a>
         <p class="hours">24時間受け付けています。<br>お返事は、翌営業日までにいたします。</p>
         <div class="qr-block">
           <div class="qr-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" class="qr" role="img" aria-label="LINE公式アカウントのQRコード"><path fill="#fff" d="M0 0h29v29h-29z"/><path stroke="#141b2a" d="M2 2.5h7m1 0h1m1 0h2m1 0h3m2 0h7m-25 1h1m5 0h1m1 0h5m5 0h1m5 0h1m-25 1h1m1 0h3m1 0h1m1 0h3m1 0h3m1 0h1m1 0h1m1 0h3m1 0h1m-25 1h1m1 0h3m1 0h1m2 0h1m3 0h1m4 0h1m1 0h3m1 0h1m-25 1h1m1 0h3m1 0h1m1 0h2m2 0h3m1 0h1m1 0h1m1 0h3m1 0h1m-25 1h1m5 0h1m2 0h1m1 0h2m1 0h1m1 0h1m1 0h1m5 0h1m-25 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-16 1h5m1 0h1m-16 1h1m2 0h6m1 0h1m3 0h1m2 0h1m2 0h1m1 0h3m-24 1h1m2 0h2m1 0h1m1 0h2m1 0h4m3 0h5m-24 1h1m2 0h2m1 0h1m1 0h3m4 0h3m2 0h2m2 0h1m-20 1h1m1 0h1m4 0h1m2 0h1m2 0h7m-25 1h8m1 0h1m2 0h1m1 0h1m1 0h1m1 0h2m4 0h1m-25 1h1m4 0h1m1 0h4m4 0h1m4 0h1m2 0h1m-24 1h4m1 0h2m1 0h1m1 0h4m1 0h1m1 0h1m2 0h5m-25 1h1m1 0h2m3 0h2m2 0h1m7 0h1m1 0h2m1 0h1m-25 1h1m2 0h2m1 0h2m1 0h1m3 0h1m1 0h6m1 0h2m-16 1h2m1 0h2m1 0h1m1 0h1m3 0h1m1 0h2m-24 1h7m1 0h1m2 0h1m2 0h1m1 0h1m1 0h1m1 0h1m3 0h1m-25 1h1m5 0h1m1 0h1m1 0h1m1 0h2m1 0h2m3 0h1m-21 1h1m1 0h3m1 0h1m1 0h1m3 0h2m1 0h6m2 0h2m-25 1h1m1 0h3m1 0h1m1 0h2m4 0h3m1 0h1m4 0h2m-25 1h1m1 0h3m1 0h1m2 0h1m2 0h1m1 0h1m2 0h1m2 0h5m-25 1h1m5 0h1m2 0h2m8 0h2m1 0h3m-25 1h7m1 0h1m1 0h1m1 0h3m1 0h2m3 0h1m2 0h1"/></svg></div>
@@ -420,7 +421,7 @@ footer strong{font-family:"Zen Old Mincho",serif; color:#fff; font-size:1.15rem;
     <p>お電話　000-0000-0000<br>
     午前9時〜午後4時／出られないときは折り返します<br>
     LINE公式アカウント　24時間受付</p>
-    <p style="margin-top:1rem"><a class="linebtn sm" href="https://lin.ee/zrGml9s" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6c-5.4 0-9.8 3.5-9.8 7.9 0 3.9 3.5 7.2 8.2 7.8.3.07.75.22.86.5.1.26.07.66.03.92l-.14.83c-.04.25-.2.97.85.53s5.65-3.33 7.7-5.7c1.42-1.56 2.1-3.14 2.1-4.88 0-4.36-4.4-7.9-9.8-7.9z"/></svg> 友だち追加はこちら</a></p>
+    <p style="margin-top:1rem"><a class="linebtn sm" href="https://lin.ee/zrGml9s" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6c-5.4 0-9.8 3.5-9.8 7.9 0 3.9 3.5 7.2 8.2 7.8.3.07.75.22.86.5.1.26.07.66.03.92l-.14.83c-.04.25-.2.97.85.53s5.65-3.33 7.7-5.7c1.42-1.56 2.1-3.14 2.1-4.88 0-4.36-4.4-7.9-9.8-7.9z"/></svg><span class="lb">友だち追加</span></a></p>
     <p style="margin-top:1.2rem; opacity:.8">※ 自力整体は健康法であり、医療行為・治療ではありません。効果の感じ方には個人差があります。</p>
   </div>
 </footer>
