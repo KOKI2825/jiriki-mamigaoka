@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
-<meta name="description" content="自力整体＠真美ヶ丘クラス。自分の手と体の重みで骨格をゆるめ、ととのえる90分の教室です。60代・70代の方が中心。見学・体験のご相談はお電話またはLINEで。">
+<meta name="description" content="自力整体＠真美ヶ丘クラス。自分の手と体の重みだけで、かたくなった関節と骨格をゆるめる90分の教室です。見学・体験のご相談はお電話またはLINEで。">
 <style>
 :root{
   --ink:#141B2A; --ink-soft:#3C4660; --ink-faint:#5F6981;
@@ -53,15 +53,17 @@ body{
   font-weight:500; font-size:1rem; line-height:2.05; letter-spacing:.04em;
   -webkit-font-smoothing:antialiased; padding-bottom:0;
 }
-h1,h2,h3,.mincho{font-family:"Zen Old Mincho","Hiragino Mincho ProN",serif; font-weight:600; letter-spacing:.05em; line-height:1.65; text-wrap:balance; margin:0}
-p{margin:0}
+h1,h2,h3,.mincho{font-family:"Zen Old Mincho","Hiragino Mincho ProN",serif; font-weight:600; letter-spacing:.05em; line-height:1.65; text-wrap:balance; word-break:auto-phrase; margin:0}
+p{margin:0; text-wrap:pretty; word-break:auto-phrase}
+br.sp{display:none}
+@media (max-width:700px){ br.pc{display:none} br.sp{display:inline} }
 
 .wrap{width:min(100% - 2rem, 1000px); margin-inline:auto}
 .narrow{width:min(100% - 2rem, 720px); margin-inline:auto}
 section{padding:clamp(3.5rem,7vw,5.5rem) 0}
 
 .label{display:inline-block; font-size:.8rem; font-weight:700; letter-spacing:.18em; color:var(--accent); background:var(--accent-bg); padding:.35rem 1.1rem; border-radius:2px}
-h2{font-size:clamp(1.6rem,4.2vw,2.35rem); margin-top:1.3rem}
+h2{font-size:clamp(1.35rem,4.4vw,2.35rem); margin-top:1.3rem}
 .lead{color:var(--ink-soft); font-size:1.02rem; max-width:36em}
 
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent); outline-offset:3px}
@@ -80,7 +82,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 
 /* ---- hero ---- */
 .hero{background:linear-gradient(180deg, var(--surface) 0%, var(--ground) 100%); padding:clamp(2.5rem,6vw,4.5rem) 0 clamp(3rem,6vw,4.5rem)}
-.flyer-note{display:inline-block; border:1px solid var(--line-strong); border-radius:2px; padding:.4rem 1rem; font-size:.8rem; color:var(--ink-soft); letter-spacing:.08em}
+.flyer-note{display:inline-block; max-width:100%; border:1px solid var(--line-strong); border-radius:2px; padding:.4rem 1rem; font-size:.8rem; color:var(--ink-soft); letter-spacing:.08em; text-wrap:balance; line-height:1.8}
 h1{font-size:clamp(1.9rem,5.4vw,3.1rem); font-weight:700; line-height:1.55; margin-top:1.4rem}
 h1 em{font-style:normal; color:var(--accent); border-bottom:.18em solid var(--accent-glow); padding-bottom:.05em}
 .hero p.big{font-size:1.1rem; color:var(--ink-soft); margin-top:1.6rem; max-width:30em}
@@ -110,7 +112,7 @@ h1 em{font-style:normal; color:var(--accent); border-bottom:.18em solid var(--ac
 .qr-plate{background:#fff; padding:.6rem; border-radius:4px; width:9.5rem}
 .qr{display:block; width:100%; height:auto; shape-rendering:crispEdges}
 .qr-block p{font-size:.78rem; color:var(--moon-soft); line-height:1.8}
-@media (max-width:700px){ .qr-block{display:none} }
+@media (max-width:700px){ .qr-block{display:none} .telbox{padding:1.5rem 1.1rem} }
 
 /* ---- worry cards ---- */
 .worries{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem; margin-top:2.6rem}
@@ -169,7 +171,8 @@ h1 em{font-style:normal; color:var(--accent); border-bottom:.18em solid var(--ac
 /* ---- faq ---- */
 details{border-bottom:1px solid var(--line); background:var(--surface)}
 details:first-of-type{border-top:1px solid var(--line)}
-summary{cursor:pointer; padding:1.3rem 3rem 1.3rem 1.4rem; font-size:1.05rem; position:relative; list-style:none; font-family:"Zen Old Mincho",serif; font-weight:600; line-height:1.7}
+summary{cursor:pointer; padding:1.3rem 3rem 1.3rem 1.4rem; font-size:1.05rem; position:relative; list-style:none; font-family:"Zen Old Mincho",serif; font-weight:600; line-height:1.7; text-wrap:balance}
+@media (max-width:700px){ summary{padding:1.2rem 2.4rem 1.2rem 1.1rem} details p{padding:0 1.1rem 1.4rem} summary::after{right:.9rem} }
 summary::-webkit-details-marker{display:none}
 summary::after{content:"＋"; position:absolute; right:1.2rem; top:1.25rem; color:var(--accent); font-size:1.2rem; font-weight:700}
 details[open] summary::after{content:"−"}
@@ -232,18 +235,17 @@ footer strong{font-family:"Zen Old Mincho",serif; color:#fff; font-size:1.15rem;
   <div class="wrap">
     <p class="flyer-note">チラシをご覧いただき、ありがとうございます</p>
     <h1>力を入れずに、<br><em>自分で</em>整える。</h1>
-    <p class="big">自力整体は、人に体をあずける施術ではありません。自分の手と、自分の体の重みだけで、かたくなった関節と骨格をゆるめていく健康法です。<br>やり方を覚えれば、ご自宅でも続けられます。</p>
+    <p class="big">自力整体は、人に体をあずける施術ではありません。<br>自分の手と体の重みだけで、かたくなった関節と骨格をゆるめていく健康法です。<br>やり方を覚えれば、ご自宅でも続けられます。</p>
     <ul class="hero-facts">
-      <li>60代・70代の方が中心</li>
       <li>体がかたい方こそ</li>
       <li>寝たまま・座ったままの動き</li>
       <li>女性が中心／男性も歓迎</li>
     </ul>
 
     <div class="telbox">
-      <p class="cap">ご相談・お申し込みは、<br>お電話またはLINEでどうぞ</p>
+      <p class="cap">ご相談・お申し込みは、<br class="pc">お電話またはLINEでどうぞ</p>
       <a class="num" href="tel:0000000000">000-0000-0000</a>
-      <p class="hours">受付時間　午前9時 〜 午後4時<br>出られないこともございます。その際は、<br>こちらから折り返しご連絡いたします。</p>
+      <p class="hours">受付時間　午前9時 〜 午後4時<br>出られないこともございます。<br>その際は、こちらから折り返します。</p>
       <p class="split">または</p>
       <a class="linebtn" href="https://lin.ee/zrGml9s" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6c-5.4 0-9.8 3.5-9.8 7.9 0 3.9 3.5 7.2 8.2 7.8.3.07.75.22.86.5.1.26.07.66.03.92l-.14.83c-.04.25-.2.97.85.53s5.65-3.33 7.7-5.7c1.42-1.56 2.1-3.14 2.1-4.88 0-4.36-4.4-7.9-9.8-7.9z"/></svg> 友だち追加はこちら<small>ボタンを押すとLINEが開きます</small></a>
     </div>
@@ -269,7 +271,7 @@ footer strong{font-family:"Zen Old Mincho",serif; color:#fff; font-size:1.15rem;
 <section style="background:var(--surface); border-block:1px solid var(--line)">
   <div class="wrap">
     <span class="label">自力整体とは</span>
-    <h2>ゆるめる「順番」を覚える、<br>90分の教室です。</h2>
+    <h2>ゆるめる「順番」を覚える、<br class="pc">90分の教室です。</h2>
     <p class="lead" style="margin-top:1.4rem">体がやわらかい人向けのものではありません。かたい方ほど、順番どおりに動かすと違いがはっきり出ます。畳一枚の広さと、自分の手だけあれば十分です。</p>
     <div class="diffs">
       <div class="diff">
@@ -373,7 +375,7 @@ footer strong{font-family:"Zen Old Mincho",serif; color:#fff; font-size:1.15rem;
     <details><summary>体がかたいのですが、大丈夫でしょうか。</summary><p>かたい方のための教室です。伸ばす動きではなく、ゆるめる動きですので、体のやわらかさは関係ありません。むしろ、かたい方のほうが変化を感じやすいです。</p></details>
     <details><summary>運動がまったく苦手です。</summary><p>ほとんどの動きを、寝たまま・座ったまま行います。走ったり、跳んだりすることはありません。息が上がることもありません。</p></details>
     <details><summary>ひざや腰が痛みます。参加できますか。</summary><p>痛む場所は動かさずに進められます。お申し込みのときに、LINEでお知らせください。無理のない範囲でご案内します。</p></details>
-    <details><summary>何歳くらいの方が通っていますか。</summary><p>60代・70代の方が中心で、80代の方もいらっしゃいます。女性の方が多いですが、男性の方もご参加いただけます。</p></details>
+    <details><summary>どんな方が通っていますか。</summary><p>幅広い年代の方がいらっしゃいます。女性の方が多いですが、男性の方もご参加いただけます。運動が得意な方より、体がかたい方・久しぶりに体を動かす方のほうが多い教室です。</p></details>
     <details><summary>どれくらいで変化を感じますか。</summary><p>感じ方には個人差があります。その日の夜に眠りの違いを感じる方もいれば、姿勢が落ち着くまで数か月かかる方もいらっしゃいます。週に1回の継続をおすすめしています。</p></details>
     <details><summary>持病があります／通院しています。</summary><p>お申し込みのときにお知らせください。治療を目的とするものではありませんので、お医者さまから運動を止められている場合は、必ず主治医にご相談のうえお越しください。</p></details>
     <details><summary>何を持っていけばよいですか。</summary><p>動きやすい服装（ジャージ・ゆったりしたズボン）と、お飲みもの、汗ふきタオルをお持ちください。マットはお貸しします。着替える場所もございます。当日は裸足になっていただきます。</p></details>
@@ -392,7 +394,7 @@ footer strong{font-family:"Zen Old Mincho",serif; color:#fff; font-size:1.15rem;
       <div class="telbox">
         <p class="cap">お電話でのお問い合わせ</p>
         <a class="num" href="tel:0000000000">000-0000-0000</a>
-        <p class="hours">受付時間　午前9時 〜 午後4時<br>出られないこともございます。その際は、<br>こちらから折り返しご連絡いたします。</p>
+        <p class="hours">受付時間　午前9時 〜 午後4時<br>出られないこともございます。<br>その際は、こちらから折り返します。</p>
       </div>
 
       <p class="or" aria-hidden="true">または</p>
@@ -415,11 +417,11 @@ footer strong{font-family:"Zen Old Mincho",serif; color:#fff; font-size:1.15rem;
 <footer>
   <div class="wrap">
     <strong>自力整体＠真美ヶ丘クラス</strong>
-    <p>お電話 000-0000-0000（午前9時〜午後4時／出られない場合は折り返します）<br>
-    LINE公式アカウント（24時間受付／お返事は翌営業日までに）</p>
+    <p>お電話　000-0000-0000<br>
+    午前9時〜午後4時／出られないときは折り返します<br>
+    LINE公式アカウント　24時間受付</p>
     <p style="margin-top:1rem"><a class="linebtn sm" href="https://lin.ee/zrGml9s" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6c-5.4 0-9.8 3.5-9.8 7.9 0 3.9 3.5 7.2 8.2 7.8.3.07.75.22.86.5.1.26.07.66.03.92l-.14.83c-.04.25-.2.97.85.53s5.65-3.33 7.7-5.7c1.42-1.56 2.1-3.14 2.1-4.88 0-4.36-4.4-7.9-9.8-7.9z"/></svg> 友だち追加はこちら</a></p>
-    <p style="margin-top:1.2rem; opacity:.8">※ 自力整体は健康法であり、医療行為・治療ではありません。効果の感じ方には個人差があります。<br>
-    ※ このページはデザイン確認用のイメージです。教室名・電話番号は仮の内容です（LINEの宛先のみ実際のアカウントです）。</p>
+    <p style="margin-top:1.2rem; opacity:.8">※ 自力整体は健康法であり、医療行為・治療ではありません。効果の感じ方には個人差があります。</p>
   </div>
 </footer>
 
