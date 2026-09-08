@@ -47,6 +47,7 @@ html.fs-lg{font-size:24px}
 @media (max-width:700px){ html{font-size:18px} html.fs-lg{font-size:21px} }
 
 *{box-sizing:border-box}
+img{display:block; max-width:100%; height:auto}
 body{
   margin:0; background:var(--ground); color:var(--ink);
   font-family:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif;
@@ -114,6 +115,24 @@ h1 em{font-style:normal; color:var(--accent); border-bottom:.18em solid var(--ac
 .qr{display:block; width:100%; height:auto; shape-rendering:crispEdges}
 .qr-block p{font-size:.78rem; color:var(--moon-soft); line-height:1.8}
 @media (max-width:700px){ .qr-block{display:none} .telbox{padding:1.5rem 1.1rem} .linebtn{padding:1rem .9rem; gap:.6rem; letter-spacing:.05em} }
+
+/* ---- lesson scene ---- */
+.scene{margin:0; background:var(--surface); border-block:1px solid var(--line)}
+.scene img{width:100%; max-height:62vh; object-fit:cover; object-position:center 45%}
+.scene figcaption{font-size:.88rem; color:var(--ink-soft); text-align:center; padding:1.2rem 1rem 1.4rem; line-height:1.9}
+
+/* ---- teacher ---- */
+.teacher{display:grid; grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr); gap:clamp(1.6rem,4vw,3rem); margin-top:2.8rem; align-items:start}
+.portrait{margin:0}
+.portrait img{width:100%; border:1px solid var(--line); box-shadow:var(--shadow)}
+.portrait figcaption{margin-top:1rem; font-family:"Zen Old Mincho",serif; font-size:1.05rem; font-weight:600; letter-spacing:.08em}
+.portrait figcaption small{display:block; font-family:"Zen Kaku Gothic New",sans-serif; font-size:.72rem; font-weight:700; letter-spacing:.16em; color:var(--accent); margin-bottom:.35rem}
+.teacher-body{display:grid; gap:1.3rem}
+.teacher-body p{font-size:.97rem; color:var(--ink-soft); line-height:2.05}
+.teacher-body p.first{font-family:"Zen Old Mincho",serif; font-size:1.15rem; color:var(--ink); line-height:1.9}
+.credentials{list-style:none; margin:.4rem 0 0; padding:1.3rem 0 0; border-top:1px solid var(--line); display:grid; gap:.75rem; font-size:.9rem}
+.credentials li{position:relative; padding-left:1.6rem; color:var(--ink); font-weight:700}
+.credentials li::before{content:"―"; position:absolute; left:0; color:var(--accent)}
 
 /* ---- worry cards ---- */
 .worries{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem; margin-top:2.6rem}
@@ -204,6 +223,9 @@ details p{padding:0 1.4rem 1.5rem; font-size:.94rem; color:var(--ink-soft); line
   .mech{grid-template-columns:1fr}
   .halves{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
+  .teacher{grid-template-columns:1fr}
+  .portrait img{max-height:58vh; object-fit:cover; object-position:center 20%}
+  .scene img{max-height:44vh}
   .or{display:block; text-align:center; font-family:"Zen Old Mincho",serif; font-weight:700; font-size:1rem; letter-spacing:.2em; color:var(--moon-soft)}
   .arrow{transform:rotate(90deg); padding:.3rem 0}
   .topbar{position:static}
@@ -254,6 +276,11 @@ footer strong{font-family:"Zen Old Mincho",serif; color:#fff; font-size:1.15rem;
 </header>
 
 <main>
+
+<figure class="scene">
+  <img src="images/lesson.jpg" alt="教室のレッスン風景。広い部屋で、それぞれがマットの上で横向きに体をゆるめている" width="1600" height="937" loading="lazy" decoding="async">
+  <figcaption>ひとりずつ、自分のペースで。となりの方と比べる必要はありません。</figcaption>
+</figure>
 
 <section>
   <div class="wrap">
@@ -370,6 +397,31 @@ footer strong{font-family:"Zen Old Mincho",serif; color:#fff; font-size:1.15rem;
 </section>
 
 <section>
+  <div class="wrap">
+    <span class="label">講師のご紹介</span>
+    <h2>自分の力で、<br class="pc">体はここまで変わります。</h2>
+    <div class="teacher">
+      <figure class="portrait">
+        <img src="images/teacher.jpg" alt="教室の講師" width="760" height="972" loading="lazy" decoding="async">
+        <figcaption><small>講師</small>自力整体＠真美ヶ丘クラス</figcaption>
+      </figure>
+      <div class="teacher-body">
+        <p class="first">「年々、体の不調が増えてきた」——<br class="pc">そんなお悩みは、ありませんか。</p>
+        <p>私自身、自力整体に出会ってからの20年間で、心も体も驚くほど良い方へと変わりました。今も体調はすこぶる良く、日々エネルギーに満ちあふれています。</p>
+        <p>現在も、自力整体の創始者である矢上先生のもとで毎週レッスンを受け、最前線の「直伝の教え」を学び続けています。またヨガ（全米ヨガアライアンス）の視点からも体の仕組みを理解しているため、生徒さんの体を一目見れば、どこが滞っているのか、どうアプローチすべきかを見極めることができます。</p>
+        <p>自力整体の素晴らしいところは、誰かに頼るのではなく、自分の力で体をベストな状態へ導けること。あなたの体にしっかりと向き合い、今いちばん必要なことをお伝えします。お気軽な気持ちで、一歩を踏み出してみてくださいね。</p>
+        <ul class="credentials">
+          <li>自力整体 歴20年</li>
+          <li>創始者・矢上先生に師事</li>
+          <li>今も毎週、直伝のレッスンを受講</li>
+          <li>ヨガ（全米ヨガアライアンス）</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--surface); border-block:1px solid var(--line)">
   <div class="narrow">
     <span class="label">よくあるご質問</span>
     <h2 style="margin-bottom:2.4rem">みなさまからのご質問。</h2>
