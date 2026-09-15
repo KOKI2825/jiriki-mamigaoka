@@ -15,7 +15,7 @@
   --line:rgba(20,27,42,.18); --line-strong:rgba(20,27,42,.4);
   --night:#16203A; --night-2:#233158; --night-line:rgba(240,244,249,.3);
   --moon:#F2F5F9; --moon-soft:#C7D0E0;
-  --accent:#A2434F; --accent-bg:#FAEDEE; --accent-glow:#E9A2A9;
+  --accent:#A2434F; --accent-bg:#FAEDEE; --accent-glow:#E9A2A9; --on-accent:#FFFFFF;
   --celadon:#3F6F67;
   --shadow:0 2px 4px rgba(20,27,42,.06), 0 14px 34px -22px rgba(20,27,42,.5);
 }
@@ -26,7 +26,7 @@
     --line:rgba(237,240,246,.2); --line-strong:rgba(237,240,246,.45);
     --night:#0A1020; --night-2:#1A2540;
     --moon:#F2F5F9; --moon-soft:#C7D0E0;
-    --accent:#EDA3AB; --accent-bg:rgba(237,163,171,.14); --accent-glow:#EDA3AB;
+    --accent:#EDA3AB; --accent-bg:rgba(237,163,171,.14); --accent-glow:#EDA3AB; --on-accent:#2A1116; --on-accent:#2A1116;
     --celadon:#87B5AC;
     --shadow:0 2px 4px rgba(0,0,0,.5), 0 16px 40px -24px rgba(0,0,0,.9);
   }
@@ -76,7 +76,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .brand small{display:none; font-family:"Zen Kaku Gothic New",sans-serif; font-size:.7rem; letter-spacing:.14em; color:var(--ink-faint); font-weight:500; margin-top:.15rem}
 .topbar-right{display:flex; align-items:center; justify-content:flex-end; gap:.9rem; flex-wrap:wrap; flex:1 1 auto}
 .fs-switch{display:flex; align-items:center; gap:.35rem; font-size:.72rem; color:var(--ink-faint)}
-.fs-switch button{font-family:inherit; font-weight:700; cursor:pointer; border:1px solid var(--line-strong); background:transparent; color:var(--ink); border-radius:3px; padding:.3rem .7rem; letter-spacing:.06em}
+.fs-switch button{font-family:inherit; font-weight:700; cursor:pointer; border:1px solid var(--line-strong); background:transparent; color:var(--ink); border-radius:3px; padding:.55rem 1rem; min-height:2.4rem; letter-spacing:.06em}
 .fs-switch button[aria-pressed="true"]{background:var(--ink); color:var(--ground); border-color:var(--ink)}
 .fs-switch .s{font-size:.8rem} .fs-switch .l{font-size:1rem}
 .topbar .linebtn.sm{color:#0A2E19}
@@ -111,8 +111,8 @@ h1 em{font-style:normal; color:var(--accent); border-bottom:.18em solid var(--ac
 
 /* ---- trial event ---- */
 .trial{background:var(--accent-bg); border-block:2px solid var(--accent)}
-.trial .label{background:var(--accent); color:#fff}
-.free-badge{display:inline-flex; align-items:center; gap:.6rem; background:var(--accent); color:#fff; font-family:"Zen Old Mincho",serif; font-weight:700; font-size:1.15rem; letter-spacing:.14em; padding:.55rem 1.5rem; border-radius:2px}
+.trial .label{background:var(--accent); color:var(--on-accent)}
+.free-badge{display:inline-flex; align-items:center; gap:.6rem; background:var(--accent); color:var(--on-accent); font-family:"Zen Old Mincho",serif; font-weight:700; font-size:1.15rem; letter-spacing:.14em; padding:.55rem 1.5rem; border-radius:2px}
 .dates{display:grid; grid-template-columns:repeat(auto-fit,minmax(275px,1fr)); gap:1rem; margin-top:2.4rem}
 .date{background:var(--surface); border:1px solid var(--line); padding:1.6rem; display:grid; gap:1rem; align-content:start; box-shadow:var(--shadow)}
 .date .when{display:flex; align-items:baseline; gap:.55rem; flex-wrap:wrap; border-bottom:2px solid var(--accent); padding-bottom:.9rem}
@@ -127,12 +127,13 @@ h1 em{font-style:normal; color:var(--accent); border-bottom:.18em solid var(--ac
 .vbox h3{font-size:1.15rem; padding-bottom:.8rem; border-bottom:2px solid var(--accent)}
 .vbox dl{margin:0; display:grid; grid-template-columns:auto 1fr; gap:.65rem 1.1rem; font-size:.93rem}
 .vbox dt{font-weight:700; white-space:nowrap; color:var(--ink-faint)}
-.vbox dd{margin:0; color:var(--ink)}
-.vbox dd a{color:var(--ink); font-weight:700}
+.vbox dd{margin:0; color:var(--ink); text-wrap:balance}
+.vbox dd a{color:var(--ink); font-weight:700; display:inline-block; padding:.45rem 0; line-height:1.4}
 .vbox ul{margin:0; padding-left:1.3rem; font-size:.93rem; color:var(--ink-soft); display:grid; gap:.55rem}
+.vbox ul li{text-wrap:pretty}
 .vbox ul.facility{display:flex; flex-wrap:wrap; gap:.5rem; padding:0; list-style:none}
-.facility li{font-size:.84rem; font-weight:700; background:var(--accent); color:#fff; padding:.4rem 1rem; border-radius:2px; letter-spacing:.04em}
-.mapbtn{display:inline-flex; align-items:center; justify-content:center; gap:.5rem; background:var(--ink); color:var(--ground); text-decoration:none; font-weight:700; font-size:.95rem; letter-spacing:.06em; padding:.85rem 1.2rem; border-radius:4px; justify-self:start}
+.facility li{font-size:.84rem; font-weight:700; background:var(--accent); color:var(--on-accent); padding:.4rem 1rem; border-radius:2px; letter-spacing:.04em}
+.mapbtn{display:flex; align-items:center; justify-content:center; gap:.5rem; background:var(--ink); color:var(--ground); text-decoration:none; font-weight:700; font-size:.95rem; letter-spacing:.06em; padding:.9rem 1.2rem; border-radius:4px; text-align:center; text-wrap:balance}
 .mapbtn:hover{background:var(--accent)}
 .mapframe{grid-column:1/-1; border:1px solid var(--line); background:var(--surface); line-height:0}
 .mapframe iframe{width:100%; height:360px; border:0; display:block}
@@ -140,8 +141,15 @@ h1 em{font-style:normal; color:var(--accent); border-bottom:.18em solid var(--ac
 /* ---- hero teaser ---- */
 .trial-teaser{display:flex; align-items:center; justify-content:center; gap:.9rem; flex-wrap:wrap; margin-top:1.2rem; padding:1rem 1.3rem; background:var(--surface); border:2px solid var(--accent); border-radius:4px; text-decoration:none; color:var(--ink); font-weight:700; font-size:1rem; text-align:center; transition:transform .2s ease}
 .trial-teaser:hover{transform:translateY(-2px)}
-.trial-teaser .tag{background:var(--accent); color:#fff; font-size:.82rem; letter-spacing:.12em; padding:.3rem .9rem; border-radius:2px}
+.trial-teaser .tag{background:var(--accent); color:var(--on-accent); font-size:.82rem; letter-spacing:.12em; padding:.3rem .9rem; border-radius:2px}
 .trial-teaser .go{color:var(--accent); font-size:.88rem}
+
+/* ---- cta band ---- */
+.cta-band{margin-top:3.2rem; background:var(--surface); border:2px solid var(--accent); border-radius:6px; padding:clamp(1.7rem,4vw,2.3rem); display:grid; justify-items:center; gap:1.1rem; text-align:center; box-shadow:var(--shadow)}
+.cta-band p{font-family:"Zen Old Mincho",serif; font-size:clamp(1.1rem,3.2vw,1.3rem); font-weight:600; line-height:1.85}
+.cta-band .sub{font-family:"Zen Kaku Gothic New",sans-serif; font-size:.9rem; font-weight:500; color:var(--ink-soft); line-height:1.9}
+.cta-band .dates-link{font-size:.9rem; font-weight:700; color:var(--ink); text-decoration:none; border-bottom:2px solid var(--accent); padding-bottom:.15rem}
+.cta-band .dates-link:hover{color:var(--accent)}
 
 /* ---- lesson scene ---- */
 .scene{margin:0; background:var(--surface); border-block:1px solid var(--line)}
@@ -164,9 +172,9 @@ h1 em{font-style:normal; color:var(--accent); border-bottom:.18em solid var(--ac
 /* ---- worry cards ---- */
 .worries{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem; margin-top:2.6rem}
 .worry{background:var(--surface); border:1px solid var(--line); border-left:6px solid var(--accent); padding:1.4rem 1.6rem; display:flex; gap:1rem; align-items:flex-start}
-.worry b{font-size:1.05rem; display:block; margin-bottom:.4rem; font-family:"Zen Old Mincho",serif}
+.worry b{font-size:1.05rem; display:block; margin-bottom:.4rem; font-family:"Zen Old Mincho",serif; text-wrap:balance}
 .worry p{font-size:.9rem; color:var(--ink-soft); line-height:1.9}
-.check{flex:none; width:1.6rem; height:1.6rem; border-radius:50%; background:var(--accent); color:#fff; display:grid; place-items:center; font-size:.85rem; font-weight:700; margin-top:.3rem}
+.check{flex:none; width:1.6rem; height:1.6rem; border-radius:50%; background:var(--accent); color:var(--on-accent); display:grid; place-items:center; font-size:.85rem; font-weight:700; margin-top:.3rem}
 
 /* ---- difference ---- */
 .diffs{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; margin-top:2.6rem}
@@ -201,15 +209,15 @@ h1 em{font-style:normal; color:var(--accent); border-bottom:.18em solid var(--ac
 .mech{display:grid; grid-template-columns:auto 1fr; gap:clamp(1.5rem,5vw,3.5rem); align-items:center; margin-top:2.8rem}
 .mech ol{list-style:none; margin:0; padding:0; display:grid; gap:1.5rem}
 .mech li{padding-left:1.4rem; border-left:4px solid var(--accent)}
-.mech li b{display:block; font-family:"Zen Old Mincho",serif; font-size:1.12rem; margin-bottom:.3rem}
-.mech li span{font-size:.92rem; color:var(--ink-soft); line-height:1.95}
+.mech li b{display:block; font-family:"Zen Old Mincho",serif; font-size:1.12rem; margin-bottom:.3rem; text-wrap:balance}
+.mech li span{font-size:.92rem; color:var(--ink-soft); line-height:1.95; text-wrap:pretty}
 
 /* ---- flow (two halves) ---- */
 .halves{display:grid; grid-template-columns:1fr auto 1fr; gap:1.2rem; align-items:stretch; margin-top:2.8rem}
 .half{background:var(--ground); border:1px solid var(--line); padding:clamp(1.6rem,3.5vw,2.2rem); display:grid; gap:.9rem; align-content:start}
 .half.latter{background:var(--accent-bg); border-color:var(--accent)}
-.half .ph{font-size:.82rem; font-weight:700; letter-spacing:.16em; color:#fff; background:var(--ink); padding:.35rem 1rem; border-radius:2px; justify-self:start}
-.half.latter .ph{background:var(--accent)}
+.half .ph{font-size:.82rem; font-weight:700; letter-spacing:.16em; color:var(--ground); background:var(--ink); padding:.35rem 1rem; border-radius:2px; justify-self:start}
+.half.latter .ph{background:var(--accent); color:var(--on-accent)}
 .half h3{font-size:clamp(1.25rem,3vw,1.55rem); line-height:1.6}
 .half p{font-size:.95rem; color:var(--ink-soft); line-height:2}
 .half .keyword{font-family:"Zen Old Mincho",serif; font-size:1rem; font-weight:600; color:var(--accent); border-top:1px solid var(--line); padding-top:.9rem}
@@ -226,7 +234,8 @@ details[open] summary::after{content:"−"}
 details p{padding:0 1.4rem 1.5rem; font-size:.94rem; color:var(--ink-soft); line-height:1.95}
 
 /* ---- final cta ---- */
-.final{background:linear-gradient(172deg,var(--night) 0%, var(--night-2) 60%, #6B5567 100%); color:var(--moon); text-align:center}
+.final{background:linear-gradient(172deg,var(--night) 0%, var(--night-2) 60%, #54415A 100%); color:var(--moon); text-align:center}
+.final .hours,.final .qr-block p,.final .cap{color:var(--moon)}
 .final h2{color:#fff}
 .final .lead{color:var(--moon-soft); margin-inline:auto; text-align:center}
 .final .telbox{background:rgba(255,255,255,.07); border:1px solid var(--night-line); max-width:620px; margin-inline:auto}
@@ -338,13 +347,13 @@ footer strong{font-family:"Zen Old Mincho",serif; color:#fff; font-size:1.15rem;
           <li>エレベーター 完備</li>
           <li>3階へお越しください</li>
         </ul>
-        <a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=%E5%BA%83%E9%99%B5%E7%94%BA%E3%82%B0%E3%83%AA%E3%83%BC%E3%83%B3%E3%83%91%E3%83%AC%E3%82%B9%20%E5%A5%88%E8%89%AF%E7%9C%8C%E5%8C%97%E8%91%9B%E5%9F%8E%E9%83%A1%E5%BA%83%E9%99%B5%E7%94%BA%E7%AC%A0168" target="_blank" rel="noopener">Googleマップで道順を見る</a>
+        <a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=%E5%BA%83%E9%99%B5%E7%94%BA%E3%82%B0%E3%83%AA%E3%83%BC%E3%83%B3%E3%83%91%E3%83%AC%E3%82%B9%20%E5%A5%88%E8%89%AF%E7%9C%8C%E5%8C%97%E8%91%9B%E5%9F%8E%E9%83%A1%E5%BA%83%E9%99%B5%E7%94%BA%E7%AC%A0168" target="_blank" rel="noopener">Googleマップで見る</a>
       </div>
 
       <div class="vbox">
         <h3>お持ちいただくもの</h3>
         <ul>
-          <li>ヨガマット（なければ敷物・バスタオルなどでも結構です）</li>
+          <li>ヨガマット（なければ敷物やバスタオルでも結構です）</li>
           <li>汗ふきタオル</li>
           <li>水分</li>
         </ul>
@@ -453,7 +462,7 @@ footer strong{font-family:"Zen Old Mincho",serif; color:#fff; font-size:1.15rem;
         <li><b>① 骨盤 ── すべての土台</b><span>座り方のくせで骨盤がかたむくと、その上に乗る背骨も必ずゆがみます。まず、ここを水平に戻します。</span></li>
         <li><b>② 背骨 ── 一つずつ動かす</b><span>かたまったところがあると、となりの骨が代わりに働きすぎて痛みが出ます。全体をまんべんなく動かします。</span></li>
         <li><b>③ 肩甲骨 ── 背中からはがす</b><span>肩甲骨が背中に貼りついたままだと、呼吸は浅いまま。ここがゆるむと胸が広がります。</span></li>
-        <li><b>④ 呼吸 ── 自律神経への入口</b><span>呼吸は、自分の意思で自律神経にはたらきかけられる数少ない方法です。骨格がととのうほど、息は深くなります。</span></li>
+        <li><b>④ 呼吸 ── 自律神経への入口</b><span>呼吸は、自律神経に自分からはたらきかけられる数少ない方法です。骨格がととのうほど、息は深くなります。</span></li>
       </ol>
     </div>
   </div>
@@ -503,6 +512,13 @@ footer strong{font-family:"Zen Old Mincho",serif; color:#fff; font-size:1.15rem;
           <li>今も毎週、直伝のレッスンを受講</li>
         </ul>
       </div>
+    </div>
+
+    <div class="cta-band">
+      <p>まずは、無料体験クラスから。</p>
+      <p class="sub">ご質問だけでもかまいません。<br class="pc">「チラシを見ました」とお送りください。</p>
+      <a class="linebtn" href="https://lin.ee/zrGml9s" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6c-5.4 0-9.8 3.5-9.8 7.9 0 3.9 3.5 7.2 8.2 7.8.3.07.75.22.86.5.1.26.07.66.03.92l-.14.83c-.04.25-.2.97.85.53s5.65-3.33 7.7-5.7c1.42-1.56 2.1-3.14 2.1-4.88 0-4.36-4.4-7.9-9.8-7.9z"/></svg><span class="lb">友だち追加<small>ボタンを押すとLINEが開きます</small></span></a>
+      <a class="dates-link" href="#trial">無料体験クラスの日程を見る</a>
     </div>
   </div>
 </section>
