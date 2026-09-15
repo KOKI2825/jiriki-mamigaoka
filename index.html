@@ -148,7 +148,7 @@ h1 em{font-style:normal; color:var(--accent); border-bottom:.18em solid var(--ac
 .cta-band{margin-top:3.2rem; background:var(--surface); border:2px solid var(--accent); border-radius:6px; padding:clamp(1.7rem,4vw,2.3rem); display:grid; justify-items:center; gap:1.1rem; text-align:center; box-shadow:var(--shadow)}
 .cta-band p{font-family:"Zen Old Mincho",serif; font-size:clamp(1.1rem,3.2vw,1.3rem); font-weight:600; line-height:1.85}
 .cta-band .sub{font-family:"Zen Kaku Gothic New",sans-serif; font-size:.9rem; font-weight:500; color:var(--ink-soft); line-height:1.9}
-.cta-band .dates-link{font-size:.9rem; font-weight:700; color:var(--ink); text-decoration:none; border-bottom:2px solid var(--accent); padding-bottom:.15rem}
+.cta-band .dates-link{display:inline-block; font-size:.9rem; font-weight:700; color:var(--ink); text-decoration:none; border-bottom:2px solid var(--accent); padding:.5rem .3rem .35rem}
 .cta-band .dates-link:hover{color:var(--accent)}
 
 /* ---- lesson scene ---- */
@@ -232,6 +232,8 @@ summary::-webkit-details-marker{display:none}
 summary::after{content:"＋"; position:absolute; right:1.2rem; top:1.25rem; color:var(--accent); font-size:1.2rem; font-weight:700}
 details[open] summary::after{content:"−"}
 details p{padding:0 1.4rem 1.5rem; font-size:.94rem; color:var(--ink-soft); line-height:1.95}
+details p a{display:inline-block; padding:.4rem 0; color:var(--ink); font-weight:700}
+footer a:not(.linebtn){display:inline-block; padding:.4rem 0}
 
 /* ---- final cta ---- */
 .final{background:linear-gradient(172deg,var(--night) 0%, var(--night-2) 60%, #54415A 100%); color:var(--moon); text-align:center}
@@ -243,6 +245,13 @@ details p{padding:0 1.4rem 1.5rem; font-size:.94rem; color:var(--ink-soft); line
 /* ---- contact: phone + form ---- */
 .contact-grid{display:grid; justify-items:center; margin-top:2.6rem}
 .contact-grid .telbox{margin-top:0; max-width:620px; width:100%; align-content:start}
+
+/* ---- mail ---- */
+.mailbox{margin-top:1.2rem; width:100%; max-width:620px; border:1px solid var(--night-line); border-radius:6px; padding:1.5rem 1.2rem; display:grid; justify-items:center; gap:.7rem; text-align:center}
+.mailbox .cap{font-size:.92rem; color:var(--moon); letter-spacing:.08em}
+.mailbox a{display:inline-block; font-family:"Zen Old Mincho",serif; font-weight:700; font-size:clamp(1.05rem,4vw,1.5rem); letter-spacing:.02em; color:#fff; text-decoration:none; border-bottom:2px solid var(--accent-glow); padding:.3rem .2rem; word-break:break-all}
+.mailbox a:hover{color:var(--accent-glow)}
+.mailbox .note2{font-size:.82rem; color:var(--moon-soft); line-height:1.9}
 
 /* ---- sticky mobile tel ---- */
 .sticky-tel{display:none}
@@ -534,7 +543,7 @@ footer strong{font-family:"Zen Old Mincho",serif; color:#fff; font-size:1.15rem;
     <details><summary>どれくらいで変化を感じますか。</summary><p>感じ方には個人差があります。その日の夜に眠りの違いを感じる方もいれば、姿勢が落ち着くまで数か月かかる方もいらっしゃいます。週に1回の継続をおすすめしています。</p></details>
     <details><summary>持病があります／通院しています。</summary><p>お申し込みのときにお知らせください。治療を目的とするものではありませんので、お医者さまから運動を止められている場合は、必ず主治医にご相談のうえお越しください。</p></details>
     <details><summary>何を持っていけばよいですか。</summary><p>床に敷くヨガマットなどをご持参ください。お持ちでない方は、バスタオルなどでもかまいません。ほかに、お飲みものと汗ふきタオルがあると安心です。<br>着替える場所はございませんので、動きやすい服装（ジャージ・ゆったりしたズボンなど）でお越しください。当日は裸足になっていただきます。</p></details>
-    <details><summary>LINEを使っていないのですが。</summary><p>恐れ入りますが、お問い合わせはLINEのみで承っております。ご家族やお知り合いのLINEからのご連絡でもかまいませんので、お気軽にご相談ください。</p></details>
+    <details><summary>LINEを使っていないのですが。</summary><p>メールでも承っております。<a href="mailto:rinda825@hotmail.com">rinda825@hotmail.com</a> までお送りください。お返事に2〜3日いただくことがございます。<br>ご家族やお知り合いのLINEからのご連絡でもかまいません。</p></details>
     <details><summary>見学だけでもよいですか。</summary><p>もちろんです。まずは様子をご覧になってからお決めください。LINEでご連絡いただければ、日時をご案内いたします。</p></details>
   </div>
 </section>
@@ -542,7 +551,7 @@ footer strong{font-family:"Zen Old Mincho",serif; color:#fff; font-size:1.15rem;
 <section class="final" id="contact">
   <div class="wrap">
     <span class="label">お問い合わせ</span>
-    <h2>LINEで、<br class="pc">お気軽にどうぞ。</h2>
+    <h2>LINE、またはメールで<br class="pc">お気軽にどうぞ。</h2>
     <p class="lead">ご質問だけでもかまいません。「チラシを見ました」とお送りいただければ、担当がご案内いたします。</p>
 
     <div class="contact-grid">
@@ -555,6 +564,12 @@ footer strong{font-family:"Zen Old Mincho",serif; color:#fff; font-size:1.15rem;
           <p>パソコンでご覧の方は、<br>スマートフォンでこちらを読み取ってください</p>
         </div>
       </div>
+
+      <div class="mailbox">
+        <p class="cap">メールでのお問い合わせ</p>
+        <a href="mailto:rinda825@hotmail.com">rinda825@hotmail.com</a>
+        <p class="note2">お返事に2〜3日いただくことがございます。<br>お急ぎの方はLINEをご利用ください。</p>
+      </div>
     </div>
   </div>
 </section>
@@ -564,8 +579,8 @@ footer strong{font-family:"Zen Old Mincho",serif; color:#fff; font-size:1.15rem;
 <footer>
   <div class="wrap">
     <strong>自力整体＠真美ヶ丘クラス</strong>
-    <p>お問い合わせは、LINE公式アカウントで承っております。<br>
-    24時間受付／お返事は翌営業日までにいたします。</p>
+    <p>お問い合わせ　LINE公式アカウント（24時間受付／お返事は翌営業日までに）<br>
+    メール　<a href="mailto:rinda825@hotmail.com" style="color:#fff">rinda825@hotmail.com</a></p>
     <p style="margin-top:1rem"><a class="linebtn sm" href="https://lin.ee/zrGml9s" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6c-5.4 0-9.8 3.5-9.8 7.9 0 3.9 3.5 7.2 8.2 7.8.3.07.75.22.86.5.1.26.07.66.03.92l-.14.83c-.04.25-.2.97.85.53s5.65-3.33 7.7-5.7c1.42-1.56 2.1-3.14 2.1-4.88 0-4.36-4.4-7.9-9.8-7.9z"/></svg><span class="lb">友だち追加</span></a></p>
     <p style="margin-top:1.2rem; opacity:.8">※ 自力整体は健康法であり、医療行為・治療ではありません。効果の感じ方には個人差があります。</p>
   </div>
