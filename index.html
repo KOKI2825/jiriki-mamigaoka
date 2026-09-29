@@ -113,7 +113,7 @@ h1 em{font-style:normal; color:var(--accent); border-bottom:.18em solid var(--ac
 .trial{background:var(--accent-bg); border-block:2px solid var(--accent)}
 .trial .label{background:var(--accent); color:var(--on-accent)}
 .free-badge{display:inline-flex; align-items:center; gap:.6rem; background:var(--accent); color:var(--on-accent); font-family:"Zen Old Mincho",serif; font-weight:700; font-size:1.15rem; letter-spacing:.14em; padding:.55rem 1.5rem; border-radius:2px}
-.dates{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; margin-top:2.4rem}
+.dates{display:grid; grid-template-columns:1fr; gap:1rem; margin-top:2.4rem}
 .date .vtag{display:flex; align-items:center; gap:.6rem; flex-wrap:wrap; font-size:.92rem; font-weight:700; line-height:1.6; margin-top:-.2rem}
 .date .vtag .b{font-size:.74rem; font-weight:700; letter-spacing:.1em; padding:.28rem .75rem; border-radius:2px; white-space:nowrap; background:var(--accent); color:var(--on-accent)}
 .date .vtag.v2 .b{background:var(--celadon); color:var(--ground)}
@@ -125,6 +125,14 @@ h1 em{font-style:normal; color:var(--accent); border-bottom:.18em solid var(--ac
 .date .time{width:100%; font-size:1.05rem; font-weight:700; font-variant-numeric:tabular-nums; letter-spacing:.04em}
 .date .theme-label{font-size:.7rem; font-weight:700; letter-spacing:.18em; color:var(--accent)}
 .date .theme{font-family:"Zen Old Mincho",serif; font-size:1.1rem; line-height:1.75; margin-top:-.6rem}
+@media (min-width:821px){
+  .dates .date{grid-template-columns:14rem 1fr; column-gap:2.4rem; row-gap:.8rem; align-items:start; padding:1.8rem 2rem}
+  .dates .date>*{grid-column:2}
+  .dates .date .when{grid-column:1; grid-row:1 / span 5; align-self:center; border-bottom:none; border-right:2px solid var(--accent); padding:.3rem 1.8rem .3rem 0; margin:0}
+  .dates .date .vtag{margin-top:0}
+  .dates .date .theme{margin-top:-.5rem}
+  .dates .date .only{margin-top:.2rem}
+}
 
 .venue{display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1rem}
 .vbox{background:var(--surface); border:1px solid var(--line); padding:1.7rem; display:grid; gap:1.1rem; align-content:start}
@@ -218,7 +226,7 @@ h1 em{font-style:normal; color:var(--accent); border-bottom:.18em solid var(--ac
 .mech ol{list-style:none; margin:0; padding:0; display:grid; gap:1.5rem}
 .mech li{padding-left:1.4rem; border-left:4px solid var(--accent)}
 .mech li b{display:block; font-family:"Zen Old Mincho",serif; font-size:1.12rem; margin-bottom:.3rem; text-wrap:balance}
-.mech li span{font-size:.92rem; color:var(--ink-soft); line-height:1.95; text-wrap:pretty}
+.mech li span{display:block; font-size:.92rem; color:var(--ink-soft); line-height:1.95; text-wrap:pretty}
 
 /* ---- flow (two halves) ---- */
 .halves{display:grid; grid-template-columns:1fr auto 1fr; gap:1.2rem; align-items:stretch; margin-top:2.8rem}
@@ -275,7 +283,6 @@ footer a:not(.linebtn){display:inline-block; padding:.4rem 0}
   .halves{grid-template-columns:1fr}
   .teacher{grid-template-columns:1fr}
   .venue{grid-template-columns:1fr}
-  .dates{grid-template-columns:1fr}
   .mapframe,.mapframe iframe{min-height:260px; height:260px}
   .portrait img{max-height:58vh; object-fit:cover; object-position:center 20%}
   .scene img{max-height:44vh}
@@ -500,7 +507,7 @@ footer strong{font-family:"Zen Old Mincho",serif; color:#fff; font-size:1.15rem;
       <ol>
         <li><b>① 骨盤 ── すべての土台</b><span>座り方のくせで骨盤がかたむくと、その上に乗る背骨も必ずゆがみます。まず、ここを水平に戻します。</span></li>
         <li><b>② 背骨 ── 一つずつ動かす</b><span>かたまったところがあると、となりの骨が代わりに働きすぎて痛みが出ます。全体をまんべんなく動かします。</span></li>
-        <li><b>③ 肩甲骨 ── 背中からはがす</b><span>肩甲骨が背中に貼りついたままだと、呼吸は浅いまま。ゆるむと胸が広がります。</span></li>
+        <li><b>③ 肩甲骨 ── 背中からはがす</b><span>背中に貼りついた肩甲骨がゆるむと、胸が広がって呼吸が深くなります。</span></li>
         <li><b>④ 呼吸 ── 自律神経への入口</b><span>呼吸は、自律神経に自分からはたらきかけられる数少ない方法です。骨格がととのうほど、息は深くなります。</span></li>
       </ol>
     </div>
