@@ -161,6 +161,18 @@ h1 em{font-style:normal; color:var(--accent); border-bottom:.18em solid var(--ac
 .trial-teaser .tag{background:var(--accent); color:var(--on-accent); font-size:.82rem; letter-spacing:.12em; padding:.3rem .9rem; border-radius:2px}
 .trial-teaser .go{color:var(--accent); font-size:.88rem}
 
+/* ---- fees ---- */
+.fees{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; margin-top:2.6rem}
+.fee{background:var(--ground); border:1px solid var(--line); padding:clamp(1.7rem,3.5vw,2.2rem); display:grid; justify-items:center; gap:.7rem; text-align:center}
+.fee .dur{font-family:"Zen Old Mincho",serif; font-size:1.25rem; font-weight:600; letter-spacing:.06em}
+.fee .freq{font-size:.82rem; font-weight:700; letter-spacing:.12em; color:var(--on-accent); background:var(--accent); padding:.3rem 1rem; border-radius:2px}
+.fee .price{display:flex; align-items:baseline; gap:.15rem; font-family:"Zen Old Mincho",serif; color:var(--ink); margin-top:.2rem}
+.fee .price .n{font-size:clamp(2.2rem,7vw,2.9rem); font-weight:700; line-height:1; font-variant-numeric:tabular-nums; letter-spacing:.01em}
+.fee .price .y{font-size:1.1rem; font-weight:600}
+.fee .price .per{font-family:"Zen Kaku Gothic New",sans-serif; font-size:.85rem; font-weight:700; color:var(--ink-faint); margin-left:.3rem}
+.fee .per1{font-size:.85rem; color:var(--ink-soft); border-top:1px solid var(--line); padding-top:.8rem; width:100%}
+@media (max-width:640px){ .fees{grid-template-columns:1fr} }
+
 /* ---- cta band ---- */
 .cta-band{margin-top:3.2rem; background:var(--surface); border:2px solid var(--accent); border-radius:6px; padding:clamp(1.7rem,4vw,2.3rem); display:grid; justify-items:center; gap:1.1rem; text-align:center; box-shadow:var(--shadow)}
 .cta-band p{font-family:"Zen Old Mincho",serif; font-size:clamp(1.1rem,3.2vw,1.3rem); font-weight:600; line-height:1.85}
@@ -576,6 +588,29 @@ footer strong{font-family:"Zen Old Mincho",serif; color:#fff; font-size:1.15rem;
 </section>
 
 <section style="background:var(--surface); border-block:1px solid var(--line)">
+  <div class="wrap">
+    <span class="label">レッスン料金</span>
+    <h2>続けやすい、月謝制です。</h2>
+    <p class="lead" style="margin-top:1.4rem">週に1回、月4回のクラスです。<br class="pc">まずは無料体験クラスで、教室の雰囲気をご覧ください。</p>
+    <div class="fees">
+      <div class="fee">
+        <p class="dur">60分クラス</p>
+        <p class="freq">月 4 回</p>
+        <p class="price"><span class="n">4,000</span><span class="y">円</span><span class="per">／月</span></p>
+        <p class="per1">1回あたり 1,000円</p>
+      </div>
+      <div class="fee">
+        <p class="dur">90分クラス</p>
+        <p class="freq">月 4 回</p>
+        <p class="price"><span class="n">6,000</span><span class="y">円</span><span class="per">／月</span></p>
+        <p class="per1">1回あたり 1,500円</p>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:1.8rem">無料体験クラスは、どなたも参加費はいただきません。<br class="pc">続けてみたいと思われたときに、あらためてご案内いたします。</p>
+  </div>
+</section>
+
+<section>
   <div class="narrow">
     <span class="label">よくあるご質問</span>
     <h2 style="margin-bottom:2.4rem">みなさまからのご質問。</h2>
